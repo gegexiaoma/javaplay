@@ -1,0 +1,18 @@
+
+@(title: String, content: String, lines: List[String])
+
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>@title</title>
+  </header>
+
+  <body>
+    <p>@(content) Start using the Template.</p>
+    <ul>
+    @for(line <- lines){
+    	<li>@line</li>
+    }
+    </ul>
+  </body>
+</html>

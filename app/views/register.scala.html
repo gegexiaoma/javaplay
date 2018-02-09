@@ -1,0 +1,13 @@
+@(userForm: Form[controllers.Application.Registration])
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1> Registration </h1>
+    @helper.form(action = routes.Application.postRegister()) {
+      @helper.inputText(userForm("email"))
+      @helper.inputPassword(userForm("password"))
+      <input type="submit">
+    }
+  </body>
+</html>
